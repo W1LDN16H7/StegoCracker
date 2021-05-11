@@ -4,7 +4,18 @@
 	<img src="stego.png" width="1200px">
 </p>
 <br>
-<br>
+
+
+#### What is steganography
+
+Steganography is the art of hiding a secret message within a normal message. This is used to transfer some secret message to another person; with this technique, no one else in between will know the secret message you wanted to convey.
+
+This art of hiding secret messages has been used for years in real-life communications. Since the evolution of digital communication, it has also been used in digital conversations.
+
+This software can hide your secret message behind the image file, wav file, mp3 file and  many other file format will support
+in future soon if you will contribute it will be good to me thanks
+
+
 
 
 You can use the [editor on GitHub](https://github.com/W1LDN16H7/StegoCracker/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
