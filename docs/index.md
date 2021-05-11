@@ -1,4 +1,11 @@
-## Welcome to GitHub Pages
+#### Welcome To StegoCracker Home :house:
+
+<p align="center">
+	<img src="stego.png" width="1200px">
+</p>
+<br>
+<br>
+
 
 You can use the [editor on GitHub](https://github.com/W1LDN16H7/StegoCracker/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
