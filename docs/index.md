@@ -16,6 +16,19 @@ This software can hide your secret message behind the image file, wav file, mp3 
 in future soon if you will contribute it will be good to me thanks
 
 
+#### What is Stego
+
+<p align="center">
+	<img src="https://blogs.blackberry.com/content/dam/blogs-blackberry-com/images/blogs/2018/02/021418-Steganography-5-LRG.png" width="500px">
+</p>
+<br>
+
+**Stego is an open-source and free steganography tool that lets you hide your secret file in an image or audio file. You will not notice any change in the image or audio file. However, your secret file will be inside the original image or audio file.**
+
+**This is command-line tool. Therefore, you need to learn the commands to use the tool. Commands will be used to embed files in the image or audio file. In addition, to extract your file from the image or audio file, you need to use another command.**
+
+
+
 
 
 You can use the [editor on GitHub](https://github.com/W1LDN16H7/StegoCracker/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
