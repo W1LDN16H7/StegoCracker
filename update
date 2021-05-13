@@ -1,0 +1,51 @@
+#!/bin/bash
+G="\033[1;34m[*] \033[0m"
+S="\033[1;32m[+] \033[0m"
+
+clear
+
+echo
+
+while [[ $(sudo -n id -u 2>&1) != 0 ]]; do
+    {
+        sudo -v -p "$(echo -e -n "$P")Password for $(whoami): "
+    } &> /dev/null
+done
+
+echo -e "$G""Updating Stego...."
+
+if [[ -f /usr/bin/stego ]]; then
+  update=true
+
+else
+  # shellcheck disable=SC2034
+  update=false
+fi
+
+{
+
+
+  cd ..
+  sudo rm -rf StegoCracker
+  sudo rm /usr/bin/stego
+  git clone https://github.com/W1LDN16H7/StegoCracker.git
+  chmod -R 777 StegoCracker
+  if [[ $update ]]; then
+    # shellcheck disable=SC2164
+    cd StegoCracker/StegoCracker
+    chmod +x Stego
+    ./Stego
+  fi
+
+
+} &> /dev/null
+
+
+if [[ ! -f /usr/bin/stego ]]; then
+  echo -e "$E""Installation failed!"
+  exit 1
+
+fi
+
+echo -e "$S""Successfully updated!"
+exit 0

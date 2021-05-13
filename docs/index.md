@@ -31,38 +31,128 @@ in future soon if you will contribute it will be good to me thanks
 
 
 
-You can use the [editor on GitHub](https://github.com/W1LDN16H7/StegoCracker/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Installation
+**Stego** is written in python3 so you need python3 to use it 
 
-### Markdown
+First clone the repo and follow 
+the given step
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<code> git clone https://github.com/W1LDN16H7/StegoCracker.git </code>
 
-```markdown
-Syntax highlighted code block
+Change the dir to Stego
 
-# Header 1
-## Header 2
-### Header 3
+<code>cd Stego*</code>
 
-- Bulleted
-- List
+Run setup.py install with python3 to install all the dependencies
 
-1. Numbered
-2. List
+**<code> python3 setup.py install </code>**
 
-**Bold** and _Italic_ and `Code` text
+Or you can install manually 
 
-[Link](url) and ![Image](src)
-```
+<code> python3 -m pip install -r requirements.txt </code>
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+After all that done run install.sh file in your terminal
 
-### Jekyll Themes
+<code> chmod +x install.sh | ./install.sh </code>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/W1LDN16H7/StegoCracker/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Now it's all done 
 
-### Support or Contact
+You can check it by running from anywhere in the terminal
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<code> stego -h </code>
+
+Congratulation you have installed the stego
+
+<p align="center">
+	<img src="stego.png" width="1200px">
+</p>
+<br>
+
+
+# Usage
+
+### Working with audio files
+
+- Convert mp3 to wav
+
+If you want to hide a secret message in a audio file, but it's a mp3 file,
+than you should use a stego -c feature to convert it into a wav file
+
+let's see
+
+<code> stego -c -f s.mp3 -out 26.wav </code>
+
+A new file named 26.wav will generate, and you can go further
+<p align="center">
+	<img src="use6.png" width="1000px">
+</p>
+<br>
+
+- Encoding Message in wav file
+
+For hiding the message or data in wav file you need to
+run the command like this
+
+<code> stego -f 23.wav -out 24.wav -m "hello this is stego" -e </code>
+
+<p align="center">
+	<img src="use4.png" width="1000px">
+</p>
+<br>
+
+as you can see it's done.Now we will try to decode the message.
+
+
+- Decoding Message from an audio file
+
+For decoding the data you need to have a wav file and turn the stego's decode mode on.
+
+<code> stego -f 24.wav -d </code>
+<p align="center">
+	<img src="use5.png" width="1000px">
+</p>
+<br>
+
+Wow we get the same message 
+
+### Working with image files
+As we saw we encoded tha data in audio files now we will use stego 
+to encode the data in images
+
+As we know the stego only support png,jpeg format till now
+but in future I will extend the support to some other file format.
+But if you can do this it will be amazing to everyone please contribute
+if you're interested in it,extend the features.
+
+- Encode message in image file
+
+<code> stego - i c.png -o out.png -e -m "Hello this is stego blah blah" </code>
+
+<p align="center">
+	<img src="use1.png" width="1000px">
+</p>
+<br>
+Now it'll encode all the given data in that image and you'll see that there isn't any differance
+In the image file
+
+- Decoding data from the image files
+
+For decoding use it like this..
+
+<code> stego -r out.png -d </code>
+
+We got the same result.
+
+
+
+# Disclaimer
+
+It is the end user's responsibility to obey all applicable local, state, federal, and international laws.
+Developers assume no liability and are not responsible for any misuse or damage caused by this program.
+
+
+# License
+
+License can we read [here]("/StegoCracker/LICENSE")
+

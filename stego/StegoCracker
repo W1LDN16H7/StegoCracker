@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+"""
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
@@ -198,4 +201,240 @@
    distributed under the License is distributed on an "AS IS" BASIS,
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
-   limitations under the License.
+   limitations under the License. """
+
+# stego Ver 1.1.0
+# Powered by Th3W1lDN1GHT
+# Secret Message Extractor
+
+# Finaly I did this
+
+import argparse
+import os
+import wave
+
+import cv2
+import numpy as np
+import pyfiglet
+from pydub import AudioSegment
+
+""" Converting to binary"""
+
+
+def show_version():
+    return "v1.1.0"
+
+
+def update(ver_):
+    os.system("./update")
+
+
+def banner():
+    banner = pyfiglet.figlet_format("stego", font="slant")
+    print("\033[91m {}\033[00m".format(banner))
+    print("\033[91m {}\033[00m".format("                By TH3W1LDN1GHT"))
+    print("\033[91m {}\033[00m".format("                " + show_version()))
+
+
+def to_bin(data):
+    if isinstance(data, str):
+        return ''.join([format(ord(i), "08b") for i in data])
+    elif isinstance(data, bytes) or isinstance(data, np.ndarray):
+        return [format(i, "08b") for i in data]
+    elif isinstance(data, int) or isinstance(data, np.unit8):
+        return format(data, "08b")
+    else:
+        raise TypeError("Type not supported")
+
+
+def encode(image_name, secret_data):
+    # read the image
+    image = cv2.imread(image_name)
+    # maximum bytes to encode
+    n_bytes = image.shape[0] * image.shape[1] * 3 // 8
+    print("[*] Maximum bytes to encode:", n_bytes)
+    if len(secret_data) > n_bytes:
+        raise ValueError("[!] Insufficient bytes, need bigger image or less data.")
+
+    print("\033[92mEncodingMode : On\033[0m \n\033[92m[*] Please wait...\033[0m \n\033[92m[*] Encoding...\033[0m")
+
+    # add stopping criteria
+    secret_data += "====="
+    data_index = 0
+    # convert data to binary
+    binary_secret_data = to_bin(secret_data)
+    # size of data to hide
+    data_len = len(binary_secret_data)
+    for row in image:
+        for pixel in row:
+            # convert RGB values to binary format
+            r, g, b = to_bin(pixel)
+            # modify the least significant bit only if there is still data to store
+            if data_index < data_len:
+                # least significant red pixel bit
+                pixel[0] = int(r[:-1] + binary_secret_data[data_index], 2)
+                data_index += 1
+            if data_index < data_len:
+                # least significant green pixel bit
+                pixel[1] = int(g[:-1] + binary_secret_data[data_index], 2)
+                data_index += 1
+            if data_index < data_len:
+                # least significant blue pixel bit
+                pixel[2] = int(b[:-1] + binary_secret_data[data_index], 2)
+                data_index += 1
+            # if data is encoded, just break out of the loop
+            if data_index >= data_len:
+                break
+    return image
+
+
+def decode(image_name):
+    print("\033[92mDecodingMode : On\033[0m \n\033[92m[*] Please wait...\033[0m \n\033[92m[*] Decoding...\033[0m")
+
+    # read the image
+    image = cv2.imread(image_name)
+    binary_data = ""
+    for row in image:
+        for pixel in row:
+            r, g, b = to_bin(pixel)
+            binary_data += r[-1]
+            binary_data += g[-1]
+            binary_data += b[-1]
+    # split by 8-bits
+    all_bytes = [binary_data[i: i + 8] for i in range(0, len(binary_data), 8)]
+    # convert from bits to characters
+    decoded_data = ""
+    for byte in all_bytes:
+        decoded_data += chr(int(byte, 2))
+        if decoded_data[-5:] == "=====":
+            break
+    return decoded_data[:-5]
+
+
+# encode music
+def en_audio(file, msg, output):
+    print("\033[92mEncodingMode : On\033[0m \n\033[92m[*] Please wait...\033[0m \n\033[92m[*] Encoding...\033[0m")
+
+    waveaudio = wave.open(file, mode='rb')
+    frame_bytes = bytearray(list(waveaudio.readframes(waveaudio.getnframes())))
+    string = msg + int((len(frame_bytes) - (len(msg) * 8 * 8)) / 8) * '#'
+    bits = list(map(int, ''.join([bin(ord(i)).lstrip('0b').rjust(8, '0') for i in string])))
+    for i, bit in enumerate(bits):
+        frame_bytes[i] = (frame_bytes[i] & 254) | bit
+    frame_modified = bytes(frame_bytes)
+    with wave.open(output, 'wb') as fd:
+        fd.setparams(waveaudio.getparams())
+        fd.writeframes(frame_modified)
+    waveaudio.close()
+
+
+# decode audio
+def decode_audio(file):
+    print("\033[92mDecodingMode : On\033[0m \n\033[92m[*] Please wait...\033[0m \n\033[92m[*] Decoding...\033[0m")
+
+    waveaudio = wave.open(file, mode='rb')
+    frame_bytes = bytearray(list(waveaudio.readframes(waveaudio.getnframes())))
+    extracted = [frame_bytes[i] & 1 for i in range(len(frame_bytes))]
+    string = "".join(chr(int("".join(map(str, extracted[i:i + 8])), 2)) for i in range(0, len(extracted), 8))
+    msg = string.split("###")[0]
+    print("Your Secret Message is: \033[1;91m" + msg + "\033[0m")
+    waveaudio.close()
+
+
+# convert mp3 to wav
+def mp3_to_wav(file, name):
+    mp3_file = AudioSegment.from_mp3(file)
+    wav_file = mp3_file.export(str(name), format="wav")
+    print("\033[92mConverting...\033[0m")
+
+    print("\033[92mDone\033[0m ")
+
+
+def help():
+    print("\033[92mHide Your Secret Message in Image File.\033[0m")
+    print('''\033[92musage: stego [-h] [-i IMAGEFILE] [-m SECRETMSG] [-o OUTPUIMAGE] [-e ENCODING [-d DECODING] [-r READFROM]
+    optional arguments:
+    -h, --help    show this help message and exit
+    -f IMAGEFILE  Select Audio File
+    -m SECRETMSG  Enter your message
+    -e ENCODE MODE Enable encode mode for encoding the image data with message
+    -d DECODE MODE Enable decode mode for reading the data or message
+    -o OUTPUTIMAGE Your output file path and name
+    -r READFROM    Read the message from given image
+    -f MUSIC FILE  Music file to decode or encode the message in\033[0m''')
+
+
+def cls():
+    os.system("clear")
+
+
+if __name__ == '__main__':
+    banner()
+    print("\n")
+    parser = argparse.ArgumentParser(description="Hide Message in a image file")
+    parser.add_argument("-i", type=str, help="Path to the image in which we want to encode our message",
+                        dest="InputImage")
+    parser.add_argument("-o", type=str, help="Path to encoded image or output image", dest="OutputImage")
+    parser.add_argument("-m", type=str, help="Message to be written in the image", dest="Message")
+    parser.add_argument("-r", type=str, help="Read message from the image ", dest="ReadFrom")
+    parser.add_argument("-e", help="Enable Encoding mode  ", action="store_true")
+    parser.add_argument("-d", help="Enable Decoding mode  ", action="store_true")
+    parser.add_argument("-f", type=str, help="Music File for decoding or encoding(ex.wav if you have mp3 please "
+                                             "use this option to convert )", dest="MusicFile")
+    parser.add_argument("-out", type=str, help="OutPut Music File for encoding message in it or converted file name",
+                        dest="OutPutMusic")
+    parser.add_argument("-c", help="Choose this option to convert a mp3 file to wav", action="store_true")
+    parser.add_argument("-v", help="show version", action="store_true")
+    parser.add_argument("-update", help="update the stego to the latest version", action="store_true")
+
+    args = parser.parse_args()
+    img_loc = args.InputImage
+    outImage = args.OutputImage
+    msg = args.Message
+    read = args.ReadFrom
+    m_file = args.MusicFile
+    o_file = args.OutPutMusic
+
+    # mp3 = args.Mp3File
+
+    if args.e:
+        if m_file:
+
+            en_audio(m_file, msg, o_file)
+            print("\033[92mDone\033[0m ")
+        elif img_loc:
+
+            encoded_image = encode(img_loc, msg)
+
+            cv2.imwrite(outImage, encoded_image)
+
+            print("\033[92mDone\033[0m ")
+
+    elif args.d:
+        if m_file:
+            decode_audio(m_file)
+            print("\033[92mDone\033[0m ")
+
+
+
+        elif read:
+            print("Your Message is : " + decode(read))
+            print("\033[92mDone\033[0m ")
+
+
+    elif args.c:
+        mp3_to_wav(m_file, o_file)
+
+
+    elif args.v:
+        print("\033[91m {}\033[00m".format("\n\nCurrently Running Version is " + str(show_version())))
+
+    elif args.update:
+        update("v1.1.0")
+
+
+
+    else:
+        print("Something went wrong,please try again immediately")
+        cls()
+        help()
