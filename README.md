@@ -1,4 +1,4 @@
-#### Welcome To StegoCracker Home :house:
+# Welcome To StegoCracker Home :house:
 
 <p align="center">
 	<img src="docs/stego.png" width="1200px">
@@ -154,4 +154,4 @@ Developers assume no liability and are not responsible for any misuse or damage 
 
 # License
 
-License can we read [here]("/StegoCracker/LICENSE")
+License can we read [here](https://github.com/W1LDN16H7/StegoCracker_v1.1.0/blob/master/LICENSE)
