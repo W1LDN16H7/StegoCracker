@@ -1,5 +1,13 @@
-# Welcome To StegoCracker Home :house:
+[![Generic badge](https://img.shields.io/badge/<Steganography>-<Tool>-<Green>.svg)](https://shields.io/) 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+![Maintaner](https://img.shields.io/badge/maintainer-TH3W1LDN16HT-red)
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/W1LDN16H7/StegoCracker_v1.1.0/blob/master/LICENSE)
+[![GitHub followers](https://img.shields.io/github/followers/Naereen.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/W1LDN16H7?tab=followers)
 
+#                                                      Welcome To StegoCracker Home :house:
+<br>
+<br>
 <p align="center">
 	<img src="docs/stego.png" width="1200px">
 </p>
