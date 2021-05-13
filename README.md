@@ -1,4 +1,4 @@
-<p align="center">
+<p align="right">
 
 [![Generic badge](https://img.shields.io/badge/Steganography-Tool<Green>.svg)](https://shields.io/) 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/W1LDN16H7)
