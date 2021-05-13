@@ -164,6 +164,9 @@ It is the end user's responsibility to obey all applicable local, state, federal
 Developers assume no liability and are not responsible for any misuse or damage caused by this program.
 
 
+### Please Contribute
+
+
 # License
 
 License can we read [here](https://github.com/W1LDN16H7/StegoCracker_v1.1.0/blob/master/LICENSE)
