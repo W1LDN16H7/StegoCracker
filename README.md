@@ -142,6 +142,10 @@ For decoding use it like this..
 
 <code> stego -r out.png -d </code>
 
+<p align="center">
+	<img src="docs/use2.png" width="1000px">
+</p>
+<br>
 We got the same result.
 
 
