@@ -1,7 +1,7 @@
 #!/bin/bash
 G="\033[1;34m[*] \033[0m"
 S="\033[1;32m[+] \033[0m"
-
+# Author TH3W1LDN16HT
 clear
 
 echo
