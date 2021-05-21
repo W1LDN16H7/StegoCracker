@@ -67,7 +67,7 @@ Or you can install manually
 
 After all that done run install.sh file in your terminal
 
-<code> chmod +x install.sh | ./install.sh </code>
+<code> chmod +x install.sh && ./install.sh </code>
 
 Now it's all done 
 
