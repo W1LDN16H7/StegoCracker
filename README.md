@@ -14,7 +14,7 @@
 <br>
 <br>
 <p align="center">
-	<img src="docs/stego.png" width="1200px">
+	<img src="docs/usage.png" width="800px">
 </p>
 <br>
 
@@ -78,7 +78,7 @@ You can check it by running from anywhere in the terminal
 Congratulation you have installed the stego
 
 <p align="center">
-	<img src="docs/stego.png" width="1200px">
+	<img src="docs/stego.png" width="800px">
 </p>
 <br>
 
@@ -98,7 +98,7 @@ let's see
 
 A new file named 26.wav will generate, and you can go further
 <p align="center">
-	<img src="docs/use6.png" width="1000px">
+	<img src="docs/use6.png" width="800px">
 </p>
 <br>
 
@@ -110,7 +110,7 @@ run the command like this
 <code> stego -f 23.wav -out 24.wav -m "hello this is stego" -e </code>
 
 <p align="center">
-	<img src="docs/use4.png" width="1000px">
+	<img src="docs/use4.png" width="800px">
 </p>
 <br>
 
@@ -123,7 +123,7 @@ For decoding the data you need to have a wav file and turn the stego's decode mo
 
 <code> stego -f 24.wav -d </code>
 <p align="center">
-	<img src="docs/use5.png" width="1000px">
+	<img src="docs/use5.png" width="800px">
 </p>
 <br>
 
@@ -143,7 +143,7 @@ if you're interested in it,extend the features.
 <code> stego - i c.png -o out.png -e -m "Hello this is stego blah blah" </code>
 
 <p align="center">
-	<img src="docs/use1.png" width="1000px">
+	<img src="docs/use1.png" width="800px">
 </p>
 <br>
 Now it'll encode all the given data in that image and you'll see that there isn't any differance
@@ -156,7 +156,7 @@ For decoding use it like this..
 <code> stego -r out.png -d </code>
 
 <p align="center">
-	<img src="docs/use2.png" width="1000px">
+	<img src="docs/use2.png" width="800px">
 </p>
 <br>
 We got the same result.
