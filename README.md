@@ -1,4 +1,4 @@
-<p align="right">
+<p align="center">
 
 [![Generic badge](https://img.shields.io/badge/Steganography-Tool<Green>.svg)](https://shields.io/) 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/W1LDN16H7)
@@ -78,7 +78,7 @@ You can check it by running from anywhere in the terminal
 Congratulation you have installed the stego
 
 <p align="center">
-	<img src="docs/stego.png" width="800px">
+	<img src="docs/usage.png" width="800px">
 </p>
 <br>
 
