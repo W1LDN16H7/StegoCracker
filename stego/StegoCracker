@@ -218,19 +218,17 @@ import numpy as np
 import pyfiglet
 from pydub import AudioSegment
 
-""" Converting to binary"""
-
 
 def show_version():
-    return "v1.1.0"
+    return "v1.1.4"
 
 
-def update(ver_):
+def update():
     os.system("./update")
 
 
 def banner():
-    banner = pyfiglet.figlet_format("stego", font="slant")
+    banner = pyfiglet.figlet_format("StegoCracker", font="slant")
     print("\033[91m {}\033[00m".format(banner))
     print("\033[91m {}\033[00m".format("                By TH3W1LDN1GHT"))
     print("\033[91m {}\033[00m".format("                " + show_version()))
@@ -351,7 +349,7 @@ def mp3_to_wav(file, name):
 
 
 def help():
-    print("\033[92mHide Your Secret Message in Image File.\033[0m")
+    print("\033[92mHide Your Secret Message in Image or Audio  File.\033[0m")
     print('''\033[92musage: stego [-h] [-i IMAGEFILE] [-m SECRETMSG] [-o OUTPUIMAGE] [-e ENCODING [-d DECODING] [-r READFROM]
     optional arguments:
     -h, --help    show this help message and exit
@@ -371,7 +369,7 @@ def cls():
 if __name__ == '__main__':
     banner()
     print("\n")
-    parser = argparse.ArgumentParser(description="Hide Message in a image file")
+    parser = argparse.ArgumentParser(description="Hide Message in a image or audio files")
     parser.add_argument("-i", type=str, help="Path to the image in which we want to encode our message",
                         dest="InputImage")
     parser.add_argument("-o", type=str, help="Path to encoded image or output image", dest="OutputImage")
@@ -430,7 +428,7 @@ if __name__ == '__main__':
         print("\033[91m {}\033[00m".format("\n\nCurrently Running Version is " + str(show_version())))
 
     elif args.update:
-        update("v1.1.0")
+        update()
 
 
 

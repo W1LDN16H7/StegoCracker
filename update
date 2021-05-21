@@ -2,6 +2,9 @@
 G="\033[1;34m[*] \033[0m"
 S="\033[1;32m[+] \033[0m"
 # Author TH3W1LDN16HT
+
+
+url="https://github.com/W1LDN16H7/StegoCracker.git"
 clear
 
 echo
@@ -25,14 +28,16 @@ fi
 {
 
 
-  cd ..
-  sudo rm -rf StegoCracker
-  sudo rm /usr/bin/stego
-  git clone https://github.com/W1LDN16H7/StegoCracker.git
-  chmod -R 777 StegoCracker
+
+
+
   if [[ $update ]]; then
     # shellcheck disable=SC2164
-    cd StegoCracker/StegoCracker
+    sudo rm /usr/bin/stego
+    git clone "$url"
+    chmod -R 777 Stego*
+    # shellcheck disable=SC2164
+    cd Stego*/stego
     chmod +x Stego
     ./Stego
   fi
