@@ -57,7 +57,7 @@ Change the dir to Stego
 
 <code>cd Stego*</code>
 
-Run setup.py install with python3 to install all the dependencies
+Run setup.py  with python3 to install all the dependencies
 
 **<code> python3 setup.py install </code>**
 
