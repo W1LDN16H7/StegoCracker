@@ -174,4 +174,4 @@ Developers assume no liability and are not responsible for any misuse or damage 
 
 # License
 
-License can we read [here](https://github.com/W1LDN16H7/StegoCracker_v1.1.0/blob/master/LICENSE)
+License can be read [here](https://github.com/W1LDN16H7/StegoCracker_v1.1.0/blob/master/LICENSE)
