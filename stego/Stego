@@ -28,7 +28,7 @@ check_package() {
 }
 check_package lolcat figlet
 echo -e "\e[0;32m$(figlet Installing Stego | lolcat) \e[0m"
-cp stego /usr/bin/stego
+cp StegoCracker /usr/bin/stego
 chmod 777 /usr/bin/stego
 echo -e $G"\e[0;32mInstallation Complete\e[0m"
 echo -e $S"\e[0;32mRun StegoCracker by stego command from anywhere...\e[0m"
