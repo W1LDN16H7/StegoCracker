@@ -36,7 +36,7 @@ in future soon if you will contribute it will be good to me thanks
 </p>
 <br>
 
-**Stego is an open-source and free steganography tool that lets you hide your secret file in an image or audio file. You will not notice any change in the image or audio file. However, your secret file will be inside the original image or audio file.**
+**Stego is an open-source and free steganography tool that lets you hide your secret message in an image or audio file. You will not notice any change in the image or audio file. However, your secret file will be inside the original image or audio file.**
 
 **This is command-line tool. Therefore, you need to learn the commands to use the tool. Commands will be used to embed files in the image or audio file. In addition, to extract your file from the image or audio file, you need to use another command.**
 
