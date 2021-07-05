@@ -187,7 +187,7 @@ It is the end user's responsibility to obey all applicable local, state, federal
 Developers assume no liability and are not responsible for any misuse or damage caused by this program.
 
 
-### [X] Please Contribute
+- [X] Please Contribute
 
 
 # License
