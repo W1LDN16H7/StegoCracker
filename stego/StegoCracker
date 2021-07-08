@@ -370,20 +370,22 @@ if __name__ == '__main__':
     banner()
     print("\n")
     parser = argparse.ArgumentParser(description="Hide Message in a image or audio files")
-    parser.add_argument("-i","--input", type=str, help="Path to the image in which we want to encode our message",
+    parser.add_argument("-i", "--input", type=str, help="Path to the image in which we want to encode our message",
                         dest="InputImage")
-    parser.add_argument("-o","--output", type=str, help="Path to encoded image or output image", dest="OutputImage")
-    parser.add_argument("-m","--message", type=str, help="Message to be written in the image", dest="Message")
-    parser.add_argument("-r","--read", type=str, help="Read message from the image ", dest="ReadFrom")
-    parser.add_argument("-e","--encoding", help="Enable Encoding mode  ", action="store_true")
-    parser.add_argument("-d","--decoding", help="Enable Decoding mode  ", action="store_true")
-    parser.add_argument("-f","--file", type=str, help="Music File for decoding or encoding(ex.wav if you have mp3 please "
-                                             "use this option to convert )", dest="MusicFile")
-    parser.add_argument("-out","--outfile", type=str, help="OutPut Music File for encoding message in it or converted file name",
+    parser.add_argument("-o", "--output", type=str, help="Path to encoded image or output image", dest="OutputImage")
+    parser.add_argument("-m", "--message", type=str, help="Message to be written in the image", dest="Message")
+    parser.add_argument("-r", "--read", type=str, help="Read message from the image ", dest="ReadFrom")
+    parser.add_argument("-e",  help="Enable Encoding mode  ", action="store_true")
+    parser.add_argument("-d", help="Enable Decoding mode  ", action="store_true")
+    parser.add_argument("-f", "--file", type=str,
+                        help="Music File for decoding or encoding(ex.wav if you have mp3 please "
+                             "use this option to convert )", dest="MusicFile")
+    parser.add_argument("-out", "--outfile", type=str,
+                        help="OutPut Music File for encoding message in it or converted file name",
                         dest="OutPutMusic")
-    parser.add_argument("-c","--convert", help="Choose this option to convert a mp3 file to wav", action="store_true")
-    parser.add_argument("-v","--version", help="show version", action="store_true")
-    parser.add_argument("-u","--update", help="update the stego to the latest version", action="store_true")
+    parser.add_argument("-c", help="Choose this option to convert a mp3 file to wav", action="store_true")
+    parser.add_argument("-v", help="show version", action="store_true")
+    parser.add_argument("--update", help="update the stego to the latest version", action="store_true")
 
     args = parser.parse_args()
     img_loc = args.InputImage

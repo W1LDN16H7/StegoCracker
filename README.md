@@ -14,7 +14,11 @@
 <br>
 <br>
 <p align="center">
-	<img src="docs/usage.png" width="1000px">
+	<img src="docs/usage1.png" width="1000px">
+</p>
+<br>
+<p align="center">
+	<img src="docs/usage2.png" width="1000px">
 </p>
 <br>
 

@@ -204,13 +204,13 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='StegoCracker_V_v1.1.0',
+    name='StegoCrackerv1.1.0',
     version='1.0.0.0',
     packages=find_packages(),
     url='https://github.com/W1LDN16H7/StegoCracker.git',
     license='Apache Licence 2.0',
-    author='kapilkumar aka TH3W1LDN1GHT',
-    scripts=['stego/Stego'],
+    author='TheKnight aka TH3W1LDN1GHT',
+    scripts=['install.sh'],
     author_email='roberthoodhood2@gmail.com',
     description='A Tool to perform styeganography with audio and image files',
     install_requires=[
