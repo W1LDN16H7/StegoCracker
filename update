@@ -32,14 +32,15 @@ fi
 
 
   if [[ $update ]]; then
-    # shellcheck disable=SC2164
-    sudo rm /usr/bin/stego
-    git clone "$url"
+    sudo rm -rf /usr/bin/stego
+    sudo mkdir $HOME/Tools
+    sudo git clone $url $HOME/Tools/
+    cd $HOME/Tools/
     chmod -R 777 Stego*
     # shellcheck disable=SC2164
-    cd Stego*/stego
-    chmod +x Stego
-    ./Stego
+    cd Stego*
+    chmod +x install.sh
+    ./install.sh
   fi
 
 

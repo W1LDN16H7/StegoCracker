@@ -4,34 +4,39 @@ G="\033[1;34m[*] \033[0m"
 S="\033[1;32m[+] \033[0m"
 
 check_package() {
-  dpkg -s $1$2$3 &>/dev/null
+  # if os is debian based
+  if [ -f /etc/debian_version ]; then
+    # if package is not installed
+    dpkg -s $1$2$3 &>/dev/null
+  elif [ -f /etc/redhat-release ]; then
+    # if package is not installed
+    rpm -q $1$2$3 &>/dev/null
+  fi
+  
+
+
+    
+
   echo -e $G"\e[1;31mChecking Dependencies....\e[0m"
   echo -e $G"\e[1;31mPlease Wait....\e[0m"
 
-  # shellcheck disable=SC2181
-  if [[ $? -eq 0 ]]; then
-    echo -e $G"\e[1;31m$1 Installed\e[0m"
-    echo -e $G"\e[1;31m$2 Installed\e[0m"
-    echo -e $G"\e[1;31m$3 Installed\e[0m"
-
-
-    #statements
-
+  if [ $? -eq 0 ]; then
+    echo -e $S"\e[1;32m$1$2$3 is installed\e[0m"
   else
-    echo -e $G"\e[1;31m$1 Not Installed\e[0m"
-    echo -e $G"\e[1;31m$2 Not Installed\e[0m"
-    echo -e $G"\e[1;31m$3 Not Installed\e[0m"
+    echo -e $S"\e[1;31m$1$2$3 is not installed\e[0m"
+    echo -e $G"\e[1;31mInstalling $1$2$3....\e[0m"
 
-
-    echo -e $G"\e[1;31mInstalling....\e[0m"
-    apt-get install "$1"
-    apt-get install "$2"
-    apt-get install "$3"
-
+    # if os is debian based
+    if [ -f /etc/debian_version ]; then
+      apt-get install $1$2$3 -y
+    elif [ -f /etc/redhat-release ]; then
+      dnf install $1$2$3 -y
+    fi
 
   fi
-
 }
+
+
 check_package lolcat figlet python3-pip
 python3 -m pip install -r requirements.txt
 echo -e "\e[0;32m$(figlet Installing Stego | lolcat) \e[0m"
