@@ -1,7 +1,7 @@
 <p align="center">
 	
 	
-[![Generic badge](https://img.shields.io/badge/Steganography-Tool<Green>.svg)](https://shields.io/) 
+| [![Generic badge](https://img.shields.io/badge/Steganography-Tool<Green>.svg)](https://shields.io/) 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/W1LDN16H7)
 ![Maintaner](https://img.shields.io/badge/Author-TheKnight-blue)
 ![Build](https://img.shields.io/badge/Build-Passing-blue)
