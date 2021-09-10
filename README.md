@@ -1,4 +1,6 @@
 <p align="center">
+	
+	
 [![Generic badge](https://img.shields.io/badge/Steganography-Tool<Green>.svg)](https://shields.io/) 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/W1LDN16H7)
 ![Maintaner](https://img.shields.io/badge/Author-TheKnight-blue)
@@ -9,7 +11,6 @@
 [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Build Status](https://travis-ci.com/W1LDN16H7/StegoCracker.svg?branch=master)](https://travis-ci.com/W1LDN16H7/StegoCracker)
 
 </p>
 
