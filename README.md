@@ -2,7 +2,9 @@
 
 [![Generic badge](https://img.shields.io/badge/Steganography-Tool<Green>.svg)](https://shields.io/) 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/W1LDN16H7)
-![Maintaner](https://img.shields.io/badge/maintainer-TH3W1LDN16HT-red)
+![Maintaner](https://img.shields.io/badge/Author-TheKnight-blue)
+[!](https://img.shields.io/badge/Build-Passing-blue)
+	
 [![made-with-python3](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Open Source Love png3](https://badges.frapsoft.com/os/v3/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
@@ -14,11 +16,11 @@
 <br>
 <br>
 <p align="center">
-	<img src="docs/usage1.png" width="1000px">
+	<img src="docs/usage1.png" width="1200px">
 </p>
 <br>
 <p align="center">
-	<img src="docs/usage2.png" width="1000px">
+	<img src="docs/usage2.png" width="1200px">
 </p>
 <br>
 
@@ -91,7 +93,7 @@ stego -h
 Congratulation you have installed the stego
 
 <p align="center">
-	<img src="docs/usage1.png" width="1000px">
+	<img src="docs/usage1.png" width="1200px">
 </p>
 <br>
 
@@ -113,7 +115,7 @@ stego -c -f s.mp3 -out 26.wav
 
 A new file named 26.wav will generate, and you can go further
 <p align="center">
-	<img src="docs/use6.png" width="1000px">
+	<img src="docs/use6.png" width="1200px">
 </p>
 <br>
 
@@ -127,7 +129,7 @@ stego -f 23.wav -out 24.wav -m "hello this is stego" -e
 ```
 
 <p align="center">
-	<img src="docs/use4.png" width="1000px">
+	<img src="docs/use4.png" width="1200px">
 </p>
 <br>
 
@@ -142,7 +144,7 @@ For decoding the data you need to have a wav file and turn the stego's decode mo
 stego  -d -f 24.wav
 ```
 <p align="center">
-	<img src="docs/use5.png" width="1000px">
+	<img src="docs/use5.png" width="1200px">
 </p>
 <br>
 
@@ -163,7 +165,7 @@ stego - i c.png -o out.png -e -m "Hello this is stego blah blah"
 ```
 
 <p align="center">
-	<img src="docs/use1.png" width="1000px">
+	<img src="docs/use1.png" width="1200px">
 </p>
 <br>
 Now it'll encode all the given data in that image and you'll see that there isn't any differance
@@ -178,7 +180,7 @@ stego -d  -r out.png
 ```
 
 <p align="center">
-	<img src="docs/use2.png" width="1000px">
+	<img src="docs/use2.png" width="1200px">
 </p>
 <br>
 We got the same result.
