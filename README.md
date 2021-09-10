@@ -1,9 +1,9 @@
 <p align="center">
 
-[[Generic badge](https://img.shields.io/badge/Steganography-Tool<Green>.svg)](https://shields.io/) 
-[[Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/W1LDN16H7)
-[Maintaner](https://img.shields.io/badge/Author-TheKnight-blue)
-[Build](https://img.shields.io/badge/Build-Passing-blue)
+[![Generic badge](https://img.shields.io/badge/Steganography-Tool<Green>.svg)](https://shields.io/) 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/W1LDN16H7)
+[![Maintaner](https://img.shields.io/badge/Author-TheKnight-blue)
+[![Build](https://img.shields.io/badge/Build-Passing-blue)
 	
 [![made-with-python3](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Open Source Love png3](https://badges.frapsoft.com/os/v3/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
