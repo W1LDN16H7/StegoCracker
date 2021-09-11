@@ -1,6 +1,11 @@
 <p align="center">
 
-	
+<br>
+<br>
+<p align="center">
+	<img src="https://1.bp.blogspot.com/-sRHHygh4MG4/XzJxdxdJjuI/AAAAAAAAASI/ba_dvZg2zycNKbItEVP7RKJ37pD-N5EOwCLcBGAsYHQ/w594-h208/images.jpeg" width="600px">
+</p>
+<br>
 
 ![Tool](https://img.shields.io/badge/Tool-Steganography-brightgreen?style=for-the-badge&logo=appveyor) [![Maintenance](https://img.shields.io/badge/Maintenance-Yes-brightgreen?style=for-the-badge&logo=appveyor)](https://github.com/W1LDN16H7)  [![Maintaner](https://img.shields.io/badge/Author-TheKnight-brightgreen?style=for-the-badge&logo=appveyor)](https://github.com/W1LDN16H7) ![Build](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge&logo=appveyor)  [![made-with-python3](https://img.shields.io/badge/Made%20With-Python3-brightgreen?style=for-the-badge&logo=appveyor)](https://www.python.org/)  [![Open Source Love png3](https://img.shields.io/badge/open-source-blue?style=for-the-badge&logo=appveyor)](https://github.com/ellerbrock/open-source-badges/)  [![made-with-bash](https://img.shields.io/badge/madewith-bash-blue?style=for-the-badge&logo=appveyor)](https://www.gnu.org/software/bash/)  ![GitHub](https://img.shields.io/github/license/W1LDN16H7/StegoCracker?style=for-the-badge)  [![Operating System](https://img.shields.io/badge/Made%20For-Kali--Linux-blue?style=for-the-badge&logo=appveyor)](https://kali.org)  [![Operating System](https://img.shields.io/badge/Made%20For-Parrot-blue?style=for-the-badge&logo=appveyor)](https://parrotsec.org)  ![Follow](https://img.shields.io/github/followers/W1LDN16H7?style=for-the-badge) ![GitHub forks](https://img.shields.io/github/forks/W1LDN16H7/StegoCracker?style=for-the-badge) ![GitHub Repo stars](https://img.shields.io/github/stars/W1LDN16H7/StegoCracker?style=for-the-badge)
 	
